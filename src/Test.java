@@ -1,78 +1,94 @@
 import com.sun.org.apache.xpath.internal.SourceTree;
 
+import java.util.Arrays;
+
 /**
  * Created by ITSchool.user on 04.04.2017.
  */
 public class Test {
     public static void main(String[] args){
-
-    //series 1-3
-        /*int[] arr = {1,2 ,3,4,5,6,7,8,9,10};
-        int sum = 0, p = 1;
-        for(int i=0; i <arr.length; ++i){
-            sum += arr[i];
-            p *=  arr[i];
+        final int k = 3, n = 5;
+        final int[] arr = new int[n];
+        for(int i = 0; i<n; ++i){
+            arr[i] = 3 * i + 1;
         }
-        System.out.println(sum);
-        System.out.println(p);
-        System.out.println( (double) sum/2);
+
+       System.out.println(Arrays.toString(arr));
+
+        //series26
+       /* for(int i = 0; i<n; ++i){
+            int res = 1;
+            for(int j =0; j<k; ++j){
+                res = res * arr[i];
+            }
+            System.out.println(res + " ");
+        }
         */
 
-       /* int n  = 5, a= 2, b = 5;
-        double arr[] = new double[n];
-        double sum = 0, p = 1;
-        for(int i = 0; i < n; ++i){
-            arr[i] =(b - a + 1) * Math.random() + a ;
-            System.out.println(arr[i]);
-            sum += arr[i];
-            p += arr[i];
-        }
-        System.out.println(sum);
-        System.out.println(p); */
+        //series26
+       /*for (int i = 0; i<n; ++i){
+           int res = arr[i];
+           for(int j =0; j<k-1;++j){
+               res *= arr[i];
+           }
+           System.out.println(res + " ");
+       }
+       */
 
-       //series5
-      /*  int n  = 5, a= 2, b = 5;
-        double arr[] = new double[n];
-        double sum = 0;
-        for(int i = 0; i < n; ++i) {
-            arr[i] = (b - a + 1) * Math.random() + a;
-            System.out.println((int) arr[i]);
-            sum += (int) arr[i];
+       //series27
+     /*  for(int i = 0; i<n; ++i){
+           int res = arr[i];
+           for(int j = 0; j<i; ++j){
+               res *= arr[i];
+           }
+           System.out.println(res + " ");
+       }
+       */
+
+        //series28
+      /*  for(int i = n-1; i>0; ++i){
+            int res = arr[i];
+            for(int ){
+
+            }
         }
-        System.out.println(sum);
         */
 
-        //series6
-    /*    int n  = 5, a= 2, b = 5;
-        double arr[] = new double[n];
-        double sum = 0, p = 1;
-        for(int i = 0; i < n; ++i) {
-            arr[i] = (b - a + 1) * Math.random() + a;
-            System.out.println(arr[i] - (int) arr[i]);
-            p *= arr[i] - (int) arr[i];
-        }
-        System.out.println(sum);
-*/
-        //series7
-       /* int n  = 5, a= 2, b = 10;
-        double arr[] = new double[n];
-        double sum = 0, p = 1;
-        for(int i = 0; i < n; ++i) {
-            arr[i] = (b - a + 1) * Math.random() + a;
-            double c  = Math.round(arr[i] - (int) arr[i]);
-            System.out.println(c);
-            p *= c;
-        }
-        System.out.println(p);
 
+      //sharjel masivi elementner@  [1, 4, 7, 10, 13] [13, 10, 7, 4, 1]
+      /* for(int i=0; i < n/2; ++i){
+           int temp = arr[i];
+           arr[i] = arr[n - i - 1];
+           arr[n - i -  1] = temp;
+      }
+
+        System.out.println(Arrays.toString(arr));
         */
 
-        //series8
-        int n  = 6;
-        int  arr[] = new int[n];
-        for(int i=0; i<n; ++i){
-            arr[i] =  i * i;
+
+      //sharjel masivi elementner@  [1, 4, 7, 10]   [7, 10, 1, 4]
+        /*
+        int f = (n + 1)/2;
+        int temp;
+        for(int i=0; i < n/2; ++i) {
+                temp = arr[i];
+                arr[i] = arr[i + f];
+                arr[i + f] = temp;
         }
+        System.out.println(Arrays.toString(arr));
+        */
+
+        //hamachap texaoxutyun, stanal masivi elementner@ hakarak hajordakanutyamd [1, 4, 7, 10, 13]   [13, 10, 7, 4, 1]
+        /*
+        int temp;
+        for(int i=0; i<n/2; ++i){
+            temp = arr[i];
+            arr[i] = arr[n - i - 1];
+            arr[n - i - 1] = temp;
+        }
+        System.out.println(Arrays.toString(arr));
+        */
+
 
     }
 }

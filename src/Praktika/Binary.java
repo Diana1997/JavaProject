@@ -28,6 +28,7 @@ public class Binary {
     }
 
 
+
     //stugel tiv@ 2m + 2n astichan e te voch
     static boolean f2(int number){
        int y = (number & (number - 1));

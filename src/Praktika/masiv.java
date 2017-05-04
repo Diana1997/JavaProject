@@ -8,6 +8,8 @@ import java.util.Arrays;
  */
 public class masiv
 {
+
+
     public static void main(String[] args) {
         //abr xndir 1
         final int n = 7;
